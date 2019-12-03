@@ -19,10 +19,10 @@ node{
     ])
   ])
   
-  def mavenHome=tool name: "mavenv3.1.1.1", type: "maven"
+  def mavenHome=tool name: "maven 3.6.2", type: "maven"
     
   stage('CheckouttheCode') {
-   git branch: 'master', credentialsId: '4d6512c4-c101-4f43-aac5-5860f5d9e20c', url: 'https://github.com/MithunTechnologiesDevOps/maven-web-application.git'  
+   git branch: 'master', credentialsId: '77302dd4bbf8c2169700f835588699dc8f01f64c', url: 'https://github.com/jagadeswar219/maven-web-application.git'  
  }
   /*
    stage('Checkout'){
@@ -47,30 +47,30 @@ node{
    }
  */
 
- stage('SonarQubeReport')
+/* stage('SonarQubeReport')
  {
   sh  "${mavenHome}/bin/mvn sonar:sonar"
- }
-
+ }*/
+/*
   stage('UploadArtifactsIntoNexus')
  {
   sh  "${mavenHome}/bin/mvn deploy"
- }
- /*
+ }*/
+ 
  stage('DeplotoTomcat'){
      
-     sh "cp $WORKSPACE/target/*.war /opt/apache-tomcat-9.0.16/webapps/"
+     sh "cp $WORKSPACE/target/*.war /opt/apache-tomcat-8.5.46/webapps/"
  }
- */
+ 
 
-stage('DeploytoTomcat'){
+/*stage('DeploytoTomcat'){
 
    sshagent(['9554f0b8-eda0-486d-9d23-ce7585c32f70']) 
    {
      sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@13.235.70.188:/opt/apache-tomcat-9.0.22/webapps/maven-web-application.war"
    }
-}
- stage('EmailNotification'){
+}*/
+ /*stage('EmailNotification'){
     mail to: 'devopstrainingblr@gmail.com',
          bcc: 'devopstrainingblr@gmail.com', 
          cc: 'devopstrainingblr@gmail.com', 
@@ -82,9 +82,9 @@ stage('DeploytoTomcat'){
                   Regards,
                   Mithun Technologies,
                   9980923226'''
- }
+ }*/
  
- stage("SlackNotification"){
+ /*stage("SlackNotification"){
      slackSend baseUrl: 'https://devops-team-bangalore.slack.com/services/hooks/jenkins-ci/', channel: 'build-notification', message: 'Build done through', tokenCredentialId: '12797dc5-eb70-4f19-8e05-8c07bc58d79d'
- }
+ }*/
 }
