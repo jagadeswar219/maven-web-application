@@ -35,7 +35,7 @@ node{
   sh  "${mavenHome}/bin/mvn clean package"
  }
 
- /* 
+ 
  stage('Testing')
    {
     if(isUnix()){
@@ -45,12 +45,12 @@ node{
        bat 'mvn test'   
       }
    }
- */
+ 
 
-/* stage('SonarQubeReport')
+ stage('SonarQubeReport')
  {
   sh  "${mavenHome}/bin/mvn sonar:sonar"
- }*/
+ }
 /*
   stage('UploadArtifactsIntoNexus')
  {
