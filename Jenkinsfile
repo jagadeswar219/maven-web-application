@@ -80,8 +80,8 @@ node{
          subject: 'Build Notification'
          body: 'Build Done, Please check the build log for more details..'
          
-                  Regards,
-                  jagadeswar reddy
+                  'Regards,'
+                  'jagadeswar reddy.'
                   
  }
  
