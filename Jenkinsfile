@@ -77,12 +77,9 @@ node{
          cc: 'jagadeswar219@gmail.com', 
          from: 'jagadeswar219@gmail.com', 
          replyTo: 'jagadeswar219@gmail.com', 
-         subject: 'Build Notification'
+         subject: 'Build Notification',
          body: 'Build Done, Please check the build log for more details..'
-         
-                  'Regards,'
-                  'jagadeswar reddy.'
-                  
+                          
  }
  
  /*stage("SlackNotification"){
