@@ -51,14 +51,15 @@ node{
  {
   sh  "${mavenHome}/bin/mvn sonar:sonar"
  }
-/*
+
   stage('UploadArtifactsIntoNexus')
  {
   sh  "${mavenHome}/bin/mvn deploy"
- }*/
+ }
  
  stage('DeplotoTomcat'){
      sh "cp $WORKSPACE/target/*.war /tmp/"
+   echo "the user is ${env.BUILD_USER}"
      //sh "cp $WORKSPACE/target/*.war /opt/apache-tomcat-8.5.46/webapps/"
  }
  
