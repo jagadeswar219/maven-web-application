@@ -78,7 +78,7 @@ node{
          from: 'jagadeswar219@gmail.com', 
          replyTo: 'jagadeswar219@gmail.com', 
          subject: 'Build Notification'
-         body: '''Build Done, Please check the build log for more details..
+         body: 'Build Done, Please check the build log for more details..'
          
                   Regards,
                   jagadeswar reddy
