@@ -71,19 +71,19 @@ node{
      sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@13.235.70.188:/opt/apache-tomcat-9.0.22/webapps/maven-web-application.war"
    }
 }*/
- /*stage('EmailNotification'){
-    mail to: 'devopstrainingblr@gmail.com',
-         bcc: 'devopstrainingblr@gmail.com', 
-         cc: 'devopstrainingblr@gmail.com', 
-         from: 'devopstrainingblr@gmail.com', 
-         replyTo: 'devopstrainingblr@gmail.com', 
+ stage('EmailNotification'){
+    mail to: 'jagadeswar219@gmail.com',
+         bcc: 'jagadeswar219@gmail.com', 
+         cc: 'jagadeswar219@gmail.com', 
+         from: 'jagadeswar219@gmail.com', 
+         replyTo: 'jagadeswar219@gmail.com', 
          subject: 'Build Notification'
          body: '''Build Done, Please check the build log for more details..
          
                   Regards,
-                  Mithun Technologies,
-                  9980923226'''
- }*/
+                  jagadeswar reddy
+                  
+ }
  
  /*stage("SlackNotification"){
      slackSend baseUrl: 'https://devops-team-bangalore.slack.com/services/hooks/jenkins-ci/', channel: 'build-notification', message: 'Build done through', tokenCredentialId: '12797dc5-eb70-4f19-8e05-8c07bc58d79d'
