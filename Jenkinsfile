@@ -19,7 +19,7 @@ node{
     ])
   ])
   
-  def mavenHome=tool name: "maven 3.6.3", type: "maven"
+  def mavenHome=tool name: "maven-3.6.3", type: "maven"
     
   stage('CheckouttheCode') {
    git branch: 'master', credentialsId: '141a4bec-0ea2-4ae6-907e-1f053813fda9', url: 'https://github.com/jagadeswar219/maven-web-application.git'  
